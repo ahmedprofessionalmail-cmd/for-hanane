@@ -3,189 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Love, Hanane</title>
+    <title>For Hanane</title>
     <style>
-        html { scroll-behavior: smooth; }
         body {
-            background-color: #0b090a;
-            color: #f8f9fa;
-            font-family: 'Georgia', serif;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fff5f5;
+            color: #4a4a4a;
             margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
             padding: 20px;
-            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+
         h1 {
-            font-size: 3rem;
-            color: #ff4d6d;
-            margin-bottom: 10px;
-            text-shadow: 0 0 15px rgba(255, 77, 109, 0.6);
-        }
-        .subtitle {
-            font-size: 1.2rem;
-            color: #a3a3a3;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-        .music-box {
-            background: rgba(22, 26, 29, 0.8);
-            border: 1px solid #ff4d6d;
-            padding: 15px 25px;
-            border-radius: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 0 15px rgba(255, 77, 109, 0.3);
-            max-width: 280px;
-        }
-        .music-title {
-            font-size: 0.9rem;
-            color: #ff758f;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-        .scroll-down {
-            margin-top: 40px;
-            font-size: 2rem;
-            animation: bounce 2s infinite;
-            color: #ff758f;
-        }
-        .story-container {
-            max-width: 600px;
-            width: 90%;
-            margin: 0 auto;
-        }
-        .story-step {
-            margin: 100px 0;
+            color: #d16262;
             text-align: center;
-            background: #161a1d;
-            border-radius: 20px;
-            padding: 30px 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid #2b2d42;
-        }
-        .story-step img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            border: 2px solid #ff4d6d;
-        }
-        .story-step p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin-top: 20px;
-        }
-        footer {
-            height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        .love-button {
-            background-color: #ff4d6d;
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.3rem;
-            font-family: 'Georgia', serif;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 0 15px rgba(255, 77, 109, 0.4);
-            transition: transform 0.3s;
-        }
-        .love-button:hover { transform: scale(1.05); }
-        #secret-message {
             margin-top: 30px;
-            font-size: 1.5rem;
-            color: #ffb703;
-            min-height: 40px;
+            font-size: 2.2rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 40px;
+            color: #8c7a7a;
+        }
+
+        .gallery {
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(209, 98, 98, 0.1);
+            border: 1px solid #ffe3e3;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .caption {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            text-align: center;
             font-weight: bold;
         }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-            40% { transform: translateY(-10px); }
-            60% { transform: translateY(-5px); }
+
+        .proposal-card {
+            border: 2px dashed #d16262;
+            background-color: #fffbbfb;
+        }
+
+        .music-btn {
+            display: inline-block;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background-color: #d16262;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(209, 98, 98, 0.3);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .music-btn:hover {
+            background-color: #b54c4c;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 60px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #a19292;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>For Hanane, My Whole World</h1>
-        <p class="subtitle">A little look back at our story...</p>
-        
-        <div class="music-box">
-            <span class="music-title">🎵 Press Play for Our Song</span>
-            <iframe width="260" height="60" src="https://www.youtube.com/embed/rtOgcKY66lE?controls=1" title="Christina Perri - A Thousand Years" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h1>A Journey of Us</h1>
+    <div class="subtitle">Press play below to open our song, then scroll down...</div>
+
+    <a href="https://youtu.be/rtOvBOTyX00?si=SYEXw2GeCSYkqOUa" target="_blank" class="music-btn">🎵 Press to Play Our Song</a>
+
+    <div class="gallery">
+
+        <div class="card">
+            <img src="step1.jpeg" alt="Step 1">
+            <div class="caption">Step 1: The very beginning of our beautiful story.</div>
         </div>
 
-        <div class="scroll-down">👇 Scroll down</div>
-    </header>
-
-    <div class="story-container">
-        <div class="story-step">
-            <img src="step1.jpeg" alt="Climbing the stairs to you">
-            <p>Every single step I took in life was just leading me closer to finding you.</p>
+        <div class="card">
+            <img src="step2.jpeg" alt="Step 2">
+            <div class="caption">Step 2: Growing closer with every single day.</div>
         </div>
 
-        <div class="story-step">
-            <img src="step2.jpeg" alt="Standing on a stool">
-            <p>Even if I need a little help standing tall next to you... 🤫</p>
+        <div class="card">
+            <img src="step3.jpeg" alt="Step 3">
+            <div class="caption">Step 3: Creating memories that will last a lifetime.</div>
         </div>
 
-        <div class="story-step">
-            <img src="step3.jpeg" alt="Getting taller">
-            <p>...you always make me feel like I'm on top of the world.</p>
+        <div class="card proposal-card">
+            <img src="proposal.jpeg" alt="Will you marry me?">
+            <div class="caption" style="color: #d16262; font-size: 1.3rem;">Hanane, will you marry me? 💍</div>
         </div>
 
-        <div class="story-step">
-            <img src="proposal.jpeg" alt="The Proposal">
-            <p>And the easiest, happiest choice I ever made was asking you to be mine forever.</p>
-        </div>
     </div>
 
-    <footer>
-        <h2>I love you more than words can say.</h2>
-        <p style="color: #a3a3a3; margin-bottom: 30px;">Click the button below for a reminder:</p>
-        <button class="love-button" onclick="revealLove()">Click Me, Hanane</button>
-        <div id="secret-message"></div>
-    </footer>
-
-    <script>
-        const messages = [
-            "You are my today and all of my tomorrows. ❤️ - Ahmed",
-            "Thank you for saying YES! 💍 - Ahmed",
-            "You still give me butterflies every single day. - Ahmed",
-            "My favorite place in the world is right next to you. - Ahmed",
-            "I love you to the moon and back, Hanane! Forever yours, Ahmed"
-        ];
-        
-        let lastIndex = -1;
-        function revealLove() {
-            let randomIndex;
-            do {
-                randomIndex = Math.floor(Math.random() * messages.length);
-            } while (randomIndex === lastIndex);
-            lastIndex = randomIndex;
-            document.getElementById('secret-message').innerText = messages[randomIndex];
-        }
-    </script>
+    <footer>Made with ❤️ for Hanane</footer>
 
 </body>
 </html>
